@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name: WP-LoginAttempts
+ * Plugin URI:  https://github.com/SandroLenz/WP-LoginAttempts
  * Description: Set a limit and timeout to wrong logins to prevent brute forcing
  * Version:     1.1
  * Author:      Sandro Lenz <sandro.lenz@buhlergroup.com>
