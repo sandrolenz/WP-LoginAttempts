@@ -4,8 +4,8 @@
  * Plugin URI:  https://github.com/SandroLenz/WP-LoginAttempts
  * Description: Set a limit and timeout to wrong logins to prevent brute forcing
  * Version:     1.1
- * Author:      Sandro Lenz <sandro.lenz@buhlergroup.com>
- * Author URI:  mailto:sandro.lenz@buhlergroup.com
+ * Author:      Sandro Lenz <sl@sandrolenz.ch>
+ * Author URI:  mailto:sl@sandrolenz.ch
  */
 
 add_filter('authenticate', 'TR_authenticate', 30, 3);
