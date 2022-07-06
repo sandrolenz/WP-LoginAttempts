@@ -1,7 +1,7 @@
 <?php
-/**
+/*
  * Plugin Name: WP-LoginAttempts
- * Plugin URI:  https://github.com/SandroLenz/WP-LoginAttempts
+ * Plugin URI:  https://github.com/sandrolenz/WP-LoginAttempts
  * Description: Set a limit and timeout to wrong logins to prevent brute forcing
  * Version:     1.1
  * Author:      Sandro Lenz <sl@sandrolenz.ch>
@@ -11,7 +11,7 @@
 add_filter('authenticate', 'TR_authenticate', 30, 3);
 add_action('wp_login_failed', 'TR_login_failed', 10, 1);
 
-# Check amount of previous logins and set timeout if more than 3
+// Check amount of previous logins and set timeout if more than 3
 function TR_authenticate($user, $username, $password)
 {
     if ($data = get_transient('failed_login')) {
@@ -31,7 +31,7 @@ function TR_authenticate($user, $username, $password)
     return $user;
 }
 
-# Count wrong login attempts
+// Count wrong login attempts
 function TR_login_failed($username)
 {
     if ($data = get_transient('failed_login')) {
@@ -43,4 +43,4 @@ function TR_login_failed($username)
     set_transient('failed_login', $data, 300);
 }
 
-# EOF
+// EOF - WP-LoginAttempts\login_attempts.php
